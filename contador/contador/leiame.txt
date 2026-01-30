@@ -1,0 +1,90 @@
+##################
+# Contador v 1.0 #
+###############################
+# Criado por Guilherme Marques#
+###############################
+# email: guizero@bol.com.br   #
+###############################
+
+_-_-_-_-_-Tópicos-_-_-_-_-_
+
+1 - Histórico
+2 - O que é?
+3 - Instalação
+4 - Configurando
+5 - Contato
+
+_-_-_-_-_-Histórico-_-_-_-_-_
+
+01/Agosto/2000 - Começo da criação.
+02/Agosto/2000 - Adicionado o Admin.
+03/Agosto/2000 - Funções de Senha para o Admin.
+04/Agosto/2000 - Adicionado o relogio, para marcar a ultima entrada.
+05/Agosto/2000 - Adicionado as Funções de resetar e adicionar.
+
+Até agora, nenhum BUG encontrado, se encontrar, mande-me um email.
+
+_-_-_-_-_-O que é?-_-_-_-_-_
+
+Este contador é meu primeiro script feito em Perl e estou muito satisfeito com ele.
+Ele possui uma administração deixando-o assim com um facil manuseio.
+Suas funções são:
+- Fácil Instalação.
+- Fácil Configuração.
+- Opção para contador Invisível.
+- Opção de mudar a Cor, o Tipo de Fonte, e o Tamanho do contador.
+- Grava IP, para que se uma pessoa de "reload" na pagina não conte duas vezes.
+- Criador de senha para o Admin.
+- Mostrador do contador com ultimo IP e a data e hora da ultima visita.
+
+_-_-_-_-_-Instalação-_-_-_-_-_
+
+É muito facil instalar o contador em sua página. Tudo o que você precisa fazer é enviar todos
+os arquivos do contador em modo "ASCII" para seu servidor do modo em que eles foram deszipados.
+Depois, de as seguintes permissões aos arquivos:
+
+../cgi-bin/contador/conta.txt        - Chmod 666
+../cgi-bin/contador/contador.cgi     - Chmod 755
+../cgi-bin/contador/admin/adver.cgi  - Chmod 755
+../cgi-bin/contador/admin/admin.cgi  - Chmod 755
+../cgi-bin/contador/admin/.htpasswrd - Chmod 644
+../cgi-bin/contador/admin/.htacess   - Chmod 644
+../cgi-bin/contador/admin/dados.pl   - Chmod 666
+
+Lembre-se! Não é preciso editar nenhum arquivo! Somente os mande para o servidor!
+
+_-_-_-_-_-Configurando-_-_-_-_-_
+
+Depois de fazer tudo acima, entre em:
+http://www.seudominio.com/cgi-bin/contador/admin/admin.cgi
+Entre no script admin.cgi seja lá onde ele estiver.
+
+1 - A primeira coisa que fará será configurar o servidor, clique em "Configurar Servidor" e 
+siga as instruções. Colocando o PATH para o lugar onde esta o conta.txt 
+(ex: /data1/hypermart.net/usuario/cgi-bin/contador)
+Lembre-se de NÃO COLOCAR A BARRA NO FINAL!!! ou então nada irá funcionar!
+Depois entre com o ENDEREÇO (não o PATH) de onde esta o conta.txt.
+
+2 - A Segunda coisa a fazer será configurar o contador, clique em "Configurar Contador" e
+configure do modo em que fique do jeito que quiser, para combinar com sua página.
+
+3 - A Terceira coisa a fazer, e uma das mais importantes, será criar os arquivos de senha,
+para isso entre em "Criar arquivos de Senha".
+
+4 - Caso você tenha escolhido o contador invisivel, para ver como ele está indo entre em
+"Veja como vai seu Contador".
+
+5 - A explicação de como colocar o contador em sua pagina está no admin, você saberá como,
+mas um previa é que deve ser usado SSI, do modo 
+<!--#exec cgi="/cgi-bin/contador/contador.cgi"-->
+
+_-_-_-_-_-Contato-_-_-_-_-_
+ 
+ O script é totalmente de graça e pode ser modificado mas você tem que deixar o inicio do CGI
+intacto (a parte onde fala o nome dele e quem o fez).
+A ultima versão do script pode ser encontrada em:
+http://aaascripts.hypermart.net/contador/
+
+ Se quiser me mandar dinheiro me contate por email :)
+
+
