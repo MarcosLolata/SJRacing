@@ -1,0 +1,1317 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 3.0">
+<style TYPE="text/css">
+#floater {
+        position: absolute;
+        left: 98%;
+        top: 100;
+        visibility: visible;
+        z-index: 10;
+}
+</style>
+<title>LISTA DE PREÇOS PRODUTOS NACIONAL</title>
+</head>
+<script LANGUAGE="JavaScript">
+
+
+        
+        self.onError=null;
+        
+        currentX = currentY = 0;  
+        whichIt = null;           
+        lastScrollX = 0; lastScrollY = 0;
+        
+        NS = (document.layers) ? 1 : 0;
+        IE = (document.all) ? 1: 0;
+        
+        <!-- STALKER CODE -->
+        function heartBeat() {
+        
+                if(IE) { diffY = document.body.scrollTop; diffX = document.body.scrollLeft; }
+            if(NS) { diffY = self.pageYOffset; diffX = self.pageXOffset; }
+                
+                if(diffY != lastScrollY) {
+                        percent = .1 * (diffY - lastScrollY);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                                        if(IE) document.all.floater.style.pixelTop += percent;
+                                        if(NS) document.floater.top += percent; 
+                        lastScrollY = lastScrollY + percent;
+            }
+                if(diffX != lastScrollX) {
+                        percent = .1 * (diffX - lastScrollX);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                        if(IE) document.all.floater.style.pixelLeft += percent;
+                        if(NS) document.floater.left += percent;
+                        lastScrollX = lastScrollX + percent;
+                }       
+        }
+        <!-- /STALKER CODE -->
+        
+        <!-- DRAG DROP CODE -->
+        function checkFocus(x,y) { 
+                stalkerx = document.floater.pageX;
+                stalkery = document.floater.pageY;
+                stalkerwidth = document.floater.clip.width;
+                stalkerheight = document.floater.clip.height;
+                if( (x > stalkerx && x < (stalkerx+stalkerwidth)) && (y > stalkery && y < (stalkery+stalkerheight))) return true;
+                else return false;
+        }
+        
+        function grabIt(e) {
+                if(IE) {
+                        whichIt = event.srcElement;
+                        while (whichIt.id.indexOf("floater") == -1) {
+                                whichIt = whichIt.parentElement;
+                                if (whichIt == null) { return true; }
+                    }
+                        whichIt.style.pixelLeft = whichIt.offsetLeft;
+                    whichIt.style.pixelTop = whichIt.offsetTop;
+                        currentX = (event.clientX + document.body.scrollLeft);
+                        currentY = (event.clientY + document.body.scrollTop);   
+                } else { 
+                window.captureEvents(Event.MOUSEMOVE);
+                if(checkFocus (e.pageX,e.pageY)) { 
+                        whichIt = document.floater;
+                        StalkerTouchedX = e.pageX-document.floater.pageX;
+
+                        StalkerTouchedY = e.pageY-document.floater.pageY;
+                } 
+                }
+            return true;
+        }
+        
+        function moveIt(e) {
+                if (whichIt == null) { return false; }
+                if(IE) {
+                    newX = (event.clientX + document.body.scrollLeft);
+                    newY = (event.clientY + document.body.scrollTop);
+                    distanceX = (newX - currentX);    distanceY = (newY - currentY);
+                    currentX = newX;    currentY = newY;
+                    whichIt.style.pixelLeft += distanceX;
+                    whichIt.style.pixelTop += distanceY;
+                        if(whichIt.style.pixelTop < document.body.scrollTop) whichIt.style.pixelTop = document.body.scrollTop;
+                        if(whichIt.style.pixelLeft < document.body.scrollLeft) whichIt.style.pixelLeft = document.body.scrollLeft;
+                        if(whichIt.style.pixelLeft > document.body.offsetWidth - document.body.scrollLeft - whichIt.style.pixelWidth - 20) whichIt.style.pixelLeft = document.body.offsetWidth - whichIt.style.pixelWidth - 20;
+                        if(whichIt.style.pixelTop > document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5) whichIt.style.pixelTop = document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5;
+                        event.returnValue = false;
+                } else { 
+                        whichIt.moveTo(e.pageX-StalkerTouchedX,e.pageY-StalkerTouchedY);
+                if(whichIt.left < 0+self.pageXOffset) whichIt.left = 0+self.pageXOffset;
+                if(whichIt.top < 0+self.pageYOffset) whichIt.top = 0+self.pageYOffset;
+                if( (whichIt.left + whichIt.clip.width) >= (window.innerWidth+self.pageXOffset-17)) whichIt.left = ((window.innerWidth+self.pageXOffset)-whichIt.clip.width)-17;
+                if( (whichIt.top + whichIt.clip.height) >= (window.innerHeight+self.pageYOffset-17)) whichIt.top = ((window.innerHeight+self.pageYOffset)-whichIt.clip.height)-17;
+                return false;
+                }
+            return false;
+        }
+        
+        function dropIt() {
+                whichIt = null;
+            if(NS) window.releaseEvents (Event.MOUSEMOVE);
+            return true;
+        }
+        <!-- DRAG DROP CODE -->
+        
+        if(NS) {
+                window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN);
+                window.onmousedown = grabIt;
+                window.onmousemove = moveIt;
+                window.onmouseup = dropIt;
+        }
+        if(IE) {
+                document.onmousedown = grabIt;
+                document.onmousemove = moveIt;
+                document.onmouseup = dropIt;
+        }
+        
+        if(NS || IE) action = window.setInterval("heartBeat()",1);
+             
+
+
+
+</script>
+
+
+<body bgcolor="#FFFFC6" text="#FF0000" background="imagem/fundo1.jpg">
+<div align="center"><center>
+
+<table border="1">
+  <tr>
+    <td height="17" class="xl24" width="40" style="height:12.75pt;width:30pt"><strong><font
+    color="#FF0000"><img SRC="Carrinho.gif" ALT="Carrinho.gif (2301 bytes)" width="79"
+    height="52"></font></strong></td>
+    <td class="xl24" width="425" style="width:319pt"><strong><p align="center"><font
+    color="#0000A0"><font SIZE="+1"><i>LISTA DE PREÇOS <br>
+    (PRODUTOS NACIONAL)</i></font> </font></strong></td>
+    <td class="xl24" width="33" style="width:25pt"><strong>&nbsp;</strong></td>
+    <td class="xl25" width="64" style="width:48pt"><strong><font color="#FF0000"><img
+    SRC="Carrinho.gif" ALT="Carrinho.gif (2301 bytes)" width="79" height="52"></font></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl24" width="40" style="height:12.75pt;width:30pt"><strong><a
+    name="RANGE!A1:D181">REF</a></strong></td>
+    <td class="xl24" width="425" style="width:319pt"><p align="center"><strong>DESCRIÇÃO</strong></td>
+    <td class="xl24" width="33" style="width:25pt"><strong>&nbsp;</strong></td>
+    <td class="xl25" width="64" style="width:48pt"><p align="center"><strong>VENDA</strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0001</strong></small></td>
+    <td class="xl27"><small><strong>Acelerador Pop resistencia simples-2r2-3r3-4r7</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="20"><small><strong>20,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0002</strong></small></td>
+    <td class="xl27"><small><strong>Acelerador c/ 1 micro c/resist.simples,c/dissipador</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="29"><small><strong>29,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0003</strong></small></td>
+    <td class="xl27"><small><strong>Acelerador c/02 micros c/resist. dupla c/dissipador</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="34"><small><strong>34,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0004</strong></small></td>
+    <td class="xl27"><small><strong>Acelerador turbo c/resist/ ext. 2r</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="40"><small><strong>40,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0006</strong></small></td>
+    <td class="xl27"><small><strong>Acelerador pop HS</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="19"><small><strong>19,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0007</strong></small></td>
+    <td class="xl27"><small><strong>Acelerador super pop HS c/dissip/</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="21"><small><strong>21,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0008</strong></small></td>
+    <td class="xl27"><small><strong>Acelerador pop HS resist. 20r</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="24"><small><strong>24,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0009</strong></small></td>
+    <td class="xl27"><small><strong>Acelerador HS para carros tyco<span
+    style="mso-spacerun:
+  yes">&nbsp; </span>(com capa)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="63"><small><strong>63,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0010</strong></small></td>
+    <td class="xl27"><small><strong>Aletas de Lexan 1/24 (jogo)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0018</strong></small></td>
+    <td class="xl27"><small><strong>Avental Camen</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="7"><small><strong>7,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0020</strong></small></td>
+    <td class="xl27"><small><strong>Arruela de latao 1/8 10 X 8un.</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0021</strong></small></td>
+    <td class="xl27"><small><strong>Arruela de motor Proparts 10 X 12</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="14"><small><strong>14,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0022</strong></small></td>
+    <td class="xl27"><small><strong>Arruela de 3/32 Proparts 10 X 12un.5MM</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="14"><small><strong>14,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0024</strong></small></td>
+    <td class="xl27"><small><strong>Arruela 3/32 Linx 7 X 12</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="7"><small><strong>7,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0025</strong></small></td>
+    <td class="xl27"><small><strong>Arruela de motor Linx 7 X 12</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="7"><small><strong>7,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0029</strong></small></td>
+    <td class="xl27"><small><strong>Arruela de nylon 1/8 (jogo)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0030</strong></small></td>
+    <td class="xl27"><small><strong>Arruela de nylon 3/32 (jogo)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0035</strong></small></td>
+    <td class="xl27"><small><strong>Braid (limpa contato)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0041</strong></small></td>
+    <td class="xl27"><small><strong>Bucha de bronze pop (par) 1/4<span
+    style="mso-spacerun: yes">&nbsp; </span>X 1/8 (novo pop)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0043</strong></small></td>
+    <td class="xl27"><small><strong>Bucha de bronze S/W (par) 3/16 X 3/32</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0045</strong></small></td>
+    <td class="xl27"><small><strong>Bucha de bronze S/W (par) 7/32 X 3/32</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0048</strong></small></td>
+    <td class="xl27"><small><strong>Bucha de Delhin 1/4 x 3/32 (par)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0049</strong></small></td>
+    <td class="xl27"><small><strong>Bucha de Delhin 3/16 x 3/32 (par)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0052</strong></small></td>
+    <td class="xl27"><small><strong>Bucha redutora de latao (jogo)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0056</strong></small></td>
+    <td class="xl27"><small><strong>Cabo de Chave Allen</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2.5"><small><strong>2,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0058</strong></small></td>
+    <td class="xl27"><small><strong>Caixa de motor TW limpo</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="9.5"><small><strong>9,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0060</strong></small></td>
+    <td class="xl27"><small><strong>Camiseta Mura</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="12"><small><strong>12,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0069</strong></small></td>
+    <td class="xl27"><small><strong>Carro Estrela F1</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="68"><small><strong>68,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0070</strong></small></td>
+    <td class="xl27"><small><strong>Carro 1/32 Trion</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="65"><small><strong>65,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0071</strong></small></td>
+    <td class="xl27"><small><strong>Carro 1/32 Parma/Trinity(s.pop -sonic-cox)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="70"><small><strong>70,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0073</strong></small></td>
+    <td class="xl27"><small><strong>Carroceria Trion pintadas</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="6.5"><small><strong>6,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>Carroceria 1/32 s/pintar em acetato cristal</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>Cobra<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Gol<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Dodge Viper</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>Aston Martin<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Jaguar<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mack</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>BMW 325I<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Kadet<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mustang</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>Corvette<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Ferrari F.50 (new)<span style="mso-spacerun: yes">&nbsp;&nbsp; </span>Opala Stock
+    CarII</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>Escort<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Fusca I<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>P.Carrera I</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>Corsa<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mercedes MM<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Spice (new)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>Ford 34<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Fiat Uno<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Pontiac</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>Ford Coupe<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Maverick<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Piloto 3 x 1</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>Ford Coupe 33<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mc.Laren F.1<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Porsche 926</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>Fusca III<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Saveiro<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Thunderbird</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0075</strong></small></td>
+    <td class="xl27"><small><strong>Honda NSX<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Ford F.1000<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Peugeot</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0077</strong></small></td>
+    <td class="xl27"><small><strong>Quaisquer carrocerias 1/32 pintadas metalicas</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="4"><small><strong>4,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0079</strong></small></td>
+    <td class="xl27"><small><strong>Carroceria 1/24 s/pintar em acetato cristal :</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0079</strong></small></td>
+    <td class="xl27"><small><strong>Porsche 966<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mohawk<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Porsche 962</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0079</strong></small></td>
+    <td class="xl27"><small><strong>Buick<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mercedes 989<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Cougar GTO</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0079</strong></small></td>
+    <td class="xl27"><small><strong>Corvette<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mercedes GT 1<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Porsche Kremer</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0079</strong></small></td>
+    <td class="xl27"><small><strong>Jaguar XJR<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mercedes (Cid)<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>MERCEDES
+    CLK</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0079</strong></small></td>
+    <td class="xl27"><small><strong>Camaro 728<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mustang<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mc Laren(new)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0079</strong></small></td>
+    <td class="xl27"><small><strong>Pointer<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Peugeot 905<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Thunderbird</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0079</strong></small></td>
+    <td class="xl27"><small><strong>Lumina<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mercedes HS<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Jaguar XJR8 New</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0080</strong></small></td>
+    <td class="xl27"><small><strong>Quaisquer Carrocerias 1/24 pintadas metalicas</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>5,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0082</strong></small></td>
+    <td class="xl27"><small><strong>Carroceria 1/24 lexan</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>5,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0082</strong></small></td>
+    <td class="xl27"><small><strong>Mercedes GT1<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Porsche 966<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Alfa</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0"><small><strong>0,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0082</strong></small></td>
+    <td class="xl27"><small><strong>Mclaren F1<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Mercedes<span style="mso-spacerun: yes">&nbsp; </span>CLK<span
+    style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Porsche</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0"><small><strong>0,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0082</strong></small></td>
+    <td class="xl27"><small><strong>Toyota<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Ferrari<span style="mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </span>Truck</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>5,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0084</strong></small></td>
+    <td class="xl27"><small><strong>Carroceria lexan pintadas</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="10"><small><strong>10,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0086</strong></small></td>
+    <td class="xl27"><small><strong>Carroceria HS 1/32</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0087</strong></small></td>
+    <td class="xl27"><small><strong>Carroceria HS 1/32 pintadas</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>5,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0088</strong></small></td>
+    <td class="xl27"><small><strong>Caroceria<span style="mso-spacerun: yes">&nbsp; </span>HS<span
+    style="mso-spacerun: yes">&nbsp; </span>1/24 1mm p/aluguel</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="21"><small><strong>21,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0094</strong></small></td>
+    <td class="xl27"><small><strong>Contato de cobre Panther</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0099</strong></small></td>
+    <td class="xl27"><small><strong>Cordoalha estanhada 1/4 p/pista (Iveliz 100mts)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0114</strong></small></td>
+    <td class="xl27"><small><strong>Contador de voltas mecanico</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="17"><small><strong>17,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0115</strong></small></td>
+    <td class="xl27"><small><strong>Contador de voltas digital</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="80"><small><strong>80,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0120</strong></small></td>
+    <td class="xl27"><small><strong>Coroa de nylon c/pivot allen incluso,29d 1/8</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.54"><small><strong>1,54</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0124</strong></small></td>
+    <td class="xl27"><small><strong>Coroa de nylon HS 3/32 sem pivot 30.31.32d</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="4"><small><strong>4,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0126</strong></small></td>
+    <td class="xl27"><small><strong>Coroa de nylon S/W c/pivot incluso tp.JK 38,39d 3/32</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0127</strong></small></td>
+    <td class="xl27"><small><strong>Coroa de nylon TW 37-38--39d. sem pivot</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>5,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0145</strong></small></td>
+    <td class="xl27"><small><strong>Chassis 1/24 BSC p/zero e 12</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="24"><small><strong>24,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0189</strong></small></td>
+    <td class="xl27"><small><strong>Chassis Linx Puma p/G.20</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="16"><small><strong>16,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0190</strong></small></td>
+    <td class="xl27"><small><strong>Chassis 1/24 Linx Tiger p/ zero</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="28"><small><strong>28,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0191</strong></small></td>
+    <td class="xl27"><small><strong>Chassis 1/24 Linx Spider p/zero</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="26"><small><strong>26,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0192</strong></small></td>
+    <td class="xl27"><small><strong>Chassis 1/24 Linx #951 Spyder latao</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="22"><small><strong>22,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0198</strong></small></td>
+    <td class="xl27"><small><strong>Chassis 1/24 Linx Eagle p/12 pro</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="40"><small><strong>40,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0200</strong></small></td>
+    <td class="xl27"><small><strong>Chassis 1/32 Proparts super pop Baby</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="11"><small><strong>11,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0202</strong></small></td>
+    <td class="xl27"><small><strong>Chassis 1/24 Proparts p/0 e 12 mod.Dart</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="16"><small><strong>16,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0204</strong></small></td>
+    <td class="xl27"><small><strong>Chassis 1/24 Proparts p/0 e 12 Charger S/H</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="22"><small><strong>22,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0251</strong></small></td>
+    <td class="xl27"><small><strong>Chave de boca estrela</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0252</strong></small></td>
+    <td class="xl27"><small><strong>Chave de fenda 1/8 x 2&quot;</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0253</strong></small></td>
+    <td class="xl27"><small><strong>Chave de fenda 3/16 x 3&quot;</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0259</strong></small></td>
+    <td class="xl27"><small><strong>Chumbo adesivo</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0270</strong></small></td>
+    <td class="xl27"><small><strong>Decalque P043 - P044 - P045</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0274</strong></small></td>
+    <td class="xl27"><small><strong>Decalque 200-202-61-62-63</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0280</strong></small></td>
+    <td class="xl27"><small><strong>Decalque Ad.Serie 60-61-62-63-64-65-P500</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0281</strong></small></td>
+    <td class="xl27"><small><strong>Decalque Ad. A1-A2-A3-A4-A5-</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0282</strong></small></td>
+    <td class="xl27"><small><strong>Decalque Ad.A11-12-13-16-17-18-19-20-21-22</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0284</strong></small></td>
+    <td class="xl27"><small><strong>Decalque Ad.SERIE 50-51-52-53-54-55-56-58-59</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0286</strong></small></td>
+    <td class="xl27"><small><strong>Decalque Ad. Serie 70-71-72-73-74-75-76</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0288</strong></small></td>
+    <td class="xl27"><small><strong>Decalque Adesivo mod. A 80 Jaguar</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0290</strong></small></td>
+    <td class="xl27"><small><strong>Decalque adesivo de identificacao de pista</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0300</strong></small></td>
+    <td class="xl27"><small><strong>Dissipador Anodizado para Motor Mura</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0302</strong></small></td>
+    <td class="xl27"><small><strong>Dissipador para Acelerador 18mm</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0304</strong></small></td>
+    <td class="xl27"><small><strong>Dissipador para Acelerador 30mm</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0308</strong></small></td>
+    <td class="xl27"><small><strong>Dissipador para Acelerador 30mm Anodizado<span
+    style="mso-spacerun: yes">&nbsp; </span>colorido</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0313</strong></small></td>
+    <td class="xl27"><small><strong>Eixo com rosca</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0316</strong></small></td>
+    <td class="xl27"><small><strong>Eixo 1/8 chanfrado</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0317</strong></small></td>
+    <td class="xl27"><small><strong>Eixo liso 3/32 com tempera Panther p/rolamento</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0320</strong></small></td>
+    <td class="xl27"><small><strong>Escova p/ acelerador</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0321</strong></small></td>
+    <td class="xl27"><small><strong>Escova mabuchi c/ rabicho</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0325</strong></small></td>
+    <td class="xl27"><small><strong>Espuma p/limpar soldador</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0330</strong></small></td>
+    <td class="xl27"><small><strong>Fita Dupla Face p/fixacao de asa (rolo c/30 mts)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="12"><small><strong>12,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0334</strong></small></td>
+    <td class="xl27"><small><strong>Fita filamentosa quadriculada 19 x 50</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="15"><small><strong>15,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0340</strong></small></td>
+    <td class="xl27"><small><strong>Fluxo para soldar</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0342</strong></small></td>
+    <td class="xl27"><small><strong>Fluxo de solda heavy (galao c/ 5 litros)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="84"><small><strong>84,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0345</strong></small></td>
+    <td class="xl27"><small><strong>Fio p/cabo de acel.Paraiso (metro)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0346</strong></small></td>
+    <td class="xl27"><small><strong>Fio sentopreme emborrachado</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2.5"><small><strong>2,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0350</strong></small></td>
+    <td class="xl27"><small><strong>Fonte Digital</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="320"><small><strong>320,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0357</strong></small></td>
+    <td class="xl27"><small><strong>Gatilho pop completo</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0358</strong></small></td>
+    <td class="xl27"><small><strong>Gatilho prof completo</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="4"><small><strong>4,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0360</strong></small></td>
+    <td class="xl27"><small><strong>Glubs Orange</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0363</strong></small></td>
+    <td class="xl27"><small><strong>Glubs Heavy 10ML</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0364</strong></small></td>
+    <td class="xl27"><small><strong>Glubs Heavy 30ML</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="4"><small><strong>4,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0370</strong></small></td>
+    <td class="xl27"><small><strong>Guia de Nylon tipo Dynamic (jogo)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0372</strong></small></td>
+    <td class="xl27"><small><strong>Guia de Nylon Jet Flag (jogo)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0374</strong></small></td>
+    <td class="xl27"><small><strong>Guia de Nylon STARBURST Preto (jogo)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0380</strong></small></td>
+    <td class="xl27"><small><strong>Ima TW</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="10"><small><strong>10,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0384</strong></small></td>
+    <td class="xl27"><small><strong>Jig de celuron p/ solda de motor</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="14"><small><strong>14,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0390</strong></small></td>
+    <td class="xl27"><small><strong>Kit completo de ferragens p/nylon TW</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="10"><small><strong>10,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0400</strong></small></td>
+    <td class="xl27"><small><strong>Micro Swicht</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0403</strong></small></td>
+    <td class="xl27"><small><strong>Mola p/Motor Estrela (par)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0404</strong></small></td>
+    <td class="xl27"><small><strong>Mola p/Acelerador HS (cada)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0409</strong></small></td>
+    <td class="xl27"><small><strong>Motor estrela Johnson</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="10"><small><strong>10,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0410</strong></small></td>
+    <td class="xl27"><small><strong>Motor TW zero</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="55"><small><strong>55,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0411</strong></small></td>
+    <td class="xl27"><small><strong>Motor TW<span style="mso-spacerun: yes">&nbsp; </span>20</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="67"><small><strong>67,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0415</strong></small></td>
+    <td class="xl27"><small><strong>Nylon Estrela limpo</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0416</strong></small></td>
+    <td class="xl27"><small><strong>Nylon limpo TW</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="6"><small><strong>6,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0418</strong></small></td>
+    <td class="xl27"><small><strong>Oleo Lubrificante</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0422</strong></small></td>
+    <td class="xl27"><small><strong>Pads Linx</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="15"><small><strong>15,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt" x:num><small><strong>423</strong></small></td>
+    <td class="xl27"><small><strong>Pads Proparts</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="12"><small><strong>12,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0425</strong></small></td>
+    <td class="xl27"><small><strong>Piloto 3x1 ou duplo</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0426</strong></small></td>
+    <td class="xl27"><small><strong>Piloto 3x1 ou duplo pintado</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>5,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0427</strong></small></td>
+    <td class="xl27"><small><strong>Piloto individual 1/24 ou 1/32</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0428</strong></small></td>
+    <td class="xl27"><small><strong>Piloto individual 1/24 ou 1/32 pintado</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0429</strong></small></td>
+    <td class="xl27"><small><strong>Piloto de lexan Mercedes</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0430</strong></small></td>
+    <td class="xl27"><small><strong>Piloto de lexan Mercedes pintado</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>5,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0435</strong></small></td>
+    <td class="xl27"><small><strong>Pinhao de Latao<span style="mso-spacerun: yes">&nbsp;&nbsp;
+    </span>7-8-9 dentes</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0436</strong></small></td>
+    <td class="xl27"><small><strong>Pinhao de latao 10 e 11 dentes</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0444</strong></small></td>
+    <td class="xl27"><small><strong>Pino banana prof</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0446</strong></small></td>
+    <td class="xl27"><small><strong>Pivot de fenda</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0450</strong></small></td>
+    <td class="xl27"><small><strong>Pneu Dianteiro c/rosca (par)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0451</strong></small></td>
+    <td class="xl27"><small><strong>Pneu Dianteiro c/pivo allen 1/8 (par)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0456</strong></small></td>
+    <td class="xl27"><small><strong>Pneu dianteiro 1/16 aluminio</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0457</strong></small></td>
+    <td class="xl27"><small><strong>Pneu Dianteiro 1/16 aluminio c/encosto aliviado</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0458</strong></small></td>
+    <td class="xl27"><small><strong>Pneu Dianteiro 1/16 anodizado colorido</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0460</strong></small></td>
+    <td class="xl27"><small><strong>Pneu dianteiro 1/16 c/ espuma de 13mm</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0471</strong></small></td>
+    <td class="xl27"><small><strong>Pneu Trazeiro c/rosca F1</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="6"><small><strong>6,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0476</strong></small></td>
+    <td class="xl27"><small><strong>Pneu Trazeiro c/pivo F1</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="6"><small><strong>6,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0477</strong></small></td>
+    <td class="xl27"><small><strong>Pneu trazeiro TW</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="9.5"><small><strong>9,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0479</strong></small></td>
+    <td class="xl27"><small><strong>Ponteira de soldador Hikari (jogo c/4 pcs)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="16"><small><strong>16,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0506</strong></small></td>
+    <td class="xl27"><small><strong>Porca de eixo</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0507</strong></small></td>
+    <td class="xl27"><small><strong>Porca de guia de aluminio</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0508</strong></small></td>
+    <td class="xl27"><small><strong>Porca de guia anodizado aliviado</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0511</strong></small></td>
+    <td class="xl27"><small><strong>Prancheta tipo formica (jig p/alinhamento)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="3"><small><strong>3,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0514</strong></small></td>
+    <td class="xl27"><small><strong>Prancheta BSC de celuron</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="14"><small><strong>14,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0515</strong></small></td>
+    <td class="xl27"><small><strong>Prancheta Linx de celuron imantado</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="35"><small><strong>35,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0517</strong></small></td>
+    <td class="xl27"><small><strong>Protetor de resistencia</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>5,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0531</strong></small></td>
+    <td class="xl27"><small><strong>Resistencia Estrela 22R</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="4"><small><strong>4,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0532</strong></small></td>
+    <td class="xl27"><small><strong>Resistencia Simples de 1r - 2r2 - 3r3 - 4r7</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="4"><small><strong>4,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0533</strong></small></td>
+    <td class="xl27"><small><strong>Resistencia Dupla de 0,8 - 1r e 1r5</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="6"><small><strong>6,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0534</strong></small></td>
+    <td class="xl27"><small><strong>Resistencia Longa Ext.2R 100 watts</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="13"><small><strong>13,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0535</strong></small></td>
+    <td class="xl27"><small><strong>Resistencia Longa Ext.2R 50 watts</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="10"><small><strong>10,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0538</strong></small></td>
+    <td class="xl27"><small><strong>Retificador de ima BSC .530-.492</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="25"><small><strong>25,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0540</strong></small></td>
+    <td class="xl27"><small><strong>Retificador de pneu Linx</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="95"><small><strong>95,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0541</strong></small></td>
+    <td class="xl27"><small><strong>Saca pinhao</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>5,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0542</strong></small></td>
+    <td class="xl27"><small><strong>Set up TW kit completo</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="40"><small><strong>40,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0543</strong></small></td>
+    <td class="xl27"><small><strong>Set up TW completo sem buchas</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="82"><small><strong>82,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0546</strong></small></td>
+    <td class="xl27"><small><strong>Solda Best pequena (bastao)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="2"><small><strong>2,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0547</strong></small></td>
+    <td class="xl27"><small><strong>Solda Best grande 1/2kl.</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="18"><small><strong>18,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0550</strong></small></td>
+    <td class="xl27"><small><strong>Soldador Cherubino 100 watts</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="28"><small><strong>28,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0551</strong></small></td>
+    <td class="xl27"><small><strong>Soldador Hikari 60 wts</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="22"><small><strong>22,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0555</strong></small></td>
+    <td class="xl27"><small><strong>Suporte de soldador<span style="mso-spacerun: yes">&nbsp; </span>Hikari
+    ou Ungar</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="15"><small><strong>15,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0560</strong></small></td>
+    <td class="xl27"><small><strong>Terminal de fio (par)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0572</strong></small></td>
+    <td class="xl27"><small><strong>Transformador 110 e 220 volts S.M.</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="30"><small><strong>30,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0580</strong></small></td>
+    <td class="xl27"><small><strong>Tiger Milk (limpa e amacia pneu) Formula Mura</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1.5"><small><strong>1,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0585</strong></small></td>
+    <td class="xl27"><small><strong>Tinta p/pintura de lexan</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="6"><small><strong>6,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt" x:str="0586 "><small><strong>0586 </strong></small></td>
+    <td class="xl27"><small><strong>Tinta kit com 6 cores</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="7"><small><strong>7,00</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0590</strong></small></td>
+    <td class="xl27"><small><strong>Trava p/motor Estrela</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="0.5"><small><strong>0,50</strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0650</strong></small></td>
+    <td class="xl27"><small><strong>Vareta de aco</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="1"><small><strong>1,00</strong></small></td>
+  </tr>
+  <tr>
+    <td height="17" class="xl26" style="height:12.75pt"><small><strong>0653</strong></small></td>
+    <td class="xl27"><small><strong>Varibrake (potenciometro)</strong></small></td>
+    <td class="xl27"><small><strong>R$</strong></small></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>5,00</strong></small></td>
+  </tr>
+  <tr>
+    <td height="17" class="xl26" style="height:12.75pt">&nbsp;&nbsp;&nbsp; </td>
+    <td class="xl27"><p align="center"><font color="#000000"><strong><font SIZE="+1">DESPACHAMOS
+    PARA TODO BRASIL</font> </strong></font></td>
+    <td class="xl27"><font color="#000000"><strong>&nbsp;&nbsp; </strong></font></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>&nbsp;&nbsp;&nbsp; </strong></small></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt">&nbsp;&nbsp;&nbsp; </td>
+    <td class="xl27"><p align="center"><font color="#000000"><strong>Para fazer seu pedido, é
+    só nos contactar por e-mail ou telefone e especificar o codigo e quantidade das
+    mercadorias </strong></font></td>
+    <td class="xl27"><font color="#000000"><strong>&nbsp;&nbsp; </strong></font></td>
+    <td class="xl28" align="right" x:num="5"><small><strong>&nbsp;&nbsp;&nbsp; </strong></small></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center"><a href="listaimportado.htm"><font color="#000000"><em><strong>LISTA DE
+PREÇOS <small><br>
+</small>(PRODUTOS IMPORTADO)</strong></em></font><small><br>
+</small></a></p>
+</body>
+</html>
+<!-- Código HTML FASTbanner! -->
+<!-- Código HTML FASTbanner! -->
+<!-- INICIO DO CODIGO DO BANNER-LINK -->
