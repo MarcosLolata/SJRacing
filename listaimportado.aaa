@@ -1,0 +1,985 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<title>LISTA DE PREÇOS PRODUTOS IMPORTADO</title>
+<style TYPE="text/css">
+#floater {
+        position: absolute;
+        left: 98%;
+        top: 100;
+        visibility: visible;
+        z-index: 10;
+}
+</style>
+</head>
+<script LANGUAGE="JavaScript">
+
+
+        
+        self.onError=null;
+        
+        currentX = currentY = 0;  
+        whichIt = null;           
+        lastScrollX = 0; lastScrollY = 0;
+        
+        NS = (document.layers) ? 1 : 0;
+        IE = (document.all) ? 1: 0;
+        
+        <!-- STALKER CODE -->
+        function heartBeat() {
+        
+                if(IE) { diffY = document.body.scrollTop; diffX = document.body.scrollLeft; }
+            if(NS) { diffY = self.pageYOffset; diffX = self.pageXOffset; }
+                
+                if(diffY != lastScrollY) {
+                        percent = .1 * (diffY - lastScrollY);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                                        if(IE) document.all.floater.style.pixelTop += percent;
+                                        if(NS) document.floater.top += percent; 
+                        lastScrollY = lastScrollY + percent;
+            }
+                if(diffX != lastScrollX) {
+                        percent = .1 * (diffX - lastScrollX);
+                        if(percent > 0) percent = Math.ceil(percent);
+                        else percent = Math.floor(percent);
+                        if(IE) document.all.floater.style.pixelLeft += percent;
+                        if(NS) document.floater.left += percent;
+                        lastScrollX = lastScrollX + percent;
+                }       
+        }
+        <!-- /STALKER CODE -->
+        
+        <!-- DRAG DROP CODE -->
+        function checkFocus(x,y) { 
+                stalkerx = document.floater.pageX;
+                stalkery = document.floater.pageY;
+                stalkerwidth = document.floater.clip.width;
+                stalkerheight = document.floater.clip.height;
+                if( (x > stalkerx && x < (stalkerx+stalkerwidth)) && (y > stalkery && y < (stalkery+stalkerheight))) return true;
+                else return false;
+        }
+        
+        function grabIt(e) {
+                if(IE) {
+                        whichIt = event.srcElement;
+                        while (whichIt.id.indexOf("floater") == -1) {
+                                whichIt = whichIt.parentElement;
+                                if (whichIt == null) { return true; }
+                    }
+                        whichIt.style.pixelLeft = whichIt.offsetLeft;
+                    whichIt.style.pixelTop = whichIt.offsetTop;
+                        currentX = (event.clientX + document.body.scrollLeft);
+                        currentY = (event.clientY + document.body.scrollTop);   
+                } else { 
+                window.captureEvents(Event.MOUSEMOVE);
+                if(checkFocus (e.pageX,e.pageY)) { 
+                        whichIt = document.floater;
+                        StalkerTouchedX = e.pageX-document.floater.pageX;
+
+                        StalkerTouchedY = e.pageY-document.floater.pageY;
+                } 
+                }
+            return true;
+        }
+        
+        function moveIt(e) {
+                if (whichIt == null) { return false; }
+                if(IE) {
+                    newX = (event.clientX + document.body.scrollLeft);
+                    newY = (event.clientY + document.body.scrollTop);
+                    distanceX = (newX - currentX);    distanceY = (newY - currentY);
+                    currentX = newX;    currentY = newY;
+                    whichIt.style.pixelLeft += distanceX;
+                    whichIt.style.pixelTop += distanceY;
+                        if(whichIt.style.pixelTop < document.body.scrollTop) whichIt.style.pixelTop = document.body.scrollTop;
+                        if(whichIt.style.pixelLeft < document.body.scrollLeft) whichIt.style.pixelLeft = document.body.scrollLeft;
+                        if(whichIt.style.pixelLeft > document.body.offsetWidth - document.body.scrollLeft - whichIt.style.pixelWidth - 20) whichIt.style.pixelLeft = document.body.offsetWidth - whichIt.style.pixelWidth - 20;
+                        if(whichIt.style.pixelTop > document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5) whichIt.style.pixelTop = document.body.offsetHeight + document.body.scrollTop - whichIt.style.pixelHeight - 5;
+                        event.returnValue = false;
+                } else { 
+                        whichIt.moveTo(e.pageX-StalkerTouchedX,e.pageY-StalkerTouchedY);
+                if(whichIt.left < 0+self.pageXOffset) whichIt.left = 0+self.pageXOffset;
+                if(whichIt.top < 0+self.pageYOffset) whichIt.top = 0+self.pageYOffset;
+                if( (whichIt.left + whichIt.clip.width) >= (window.innerWidth+self.pageXOffset-17)) whichIt.left = ((window.innerWidth+self.pageXOffset)-whichIt.clip.width)-17;
+                if( (whichIt.top + whichIt.clip.height) >= (window.innerHeight+self.pageYOffset-17)) whichIt.top = ((window.innerHeight+self.pageYOffset)-whichIt.clip.height)-17;
+                return false;
+                }
+            return false;
+        }
+        
+        function dropIt() {
+                whichIt = null;
+            if(NS) window.releaseEvents (Event.MOUSEMOVE);
+            return true;
+        }
+        <!-- DRAG DROP CODE -->
+        
+        if(NS) {
+                window.captureEvents(Event.MOUSEUP|Event.MOUSEDOWN);
+                window.onmousedown = grabIt;
+                window.onmousemove = moveIt;
+                window.onmouseup = dropIt;
+        }
+        if(IE) {
+                document.onmousedown = grabIt;
+                document.onmousemove = moveIt;
+                document.onmouseup = dropIt;
+        }
+        
+        if(NS || IE) action = window.setInterval("heartBeat()",1);
+             
+
+
+
+</script>
+
+
+<body bgcolor="#FFFFC6" text="#FF0000" background="imagem/fundo1.jpg">
+<div align="center"><center>
+
+<table border="1">
+  <tr>
+    <td height="17" class="xl24" width="41" style="height:12.75pt;width:31pt"><strong><img
+    src="Carrinho.gif" width="79" height="52" alt="Carrinho.gif (2301 bytes)"></strong></td>
+    <td class="xl24" width="431" style="width:323pt"><strong><small><p align="center"></small><font
+    color="#000000"><em><big>LISTA DE PREÇOS </big><br>
+    <big>(PRODUTOS IMPORTADO)</big></em></font></strong></td>
+    <td class="xl24" width="35" style="width:26pt">&nbsp;</td>
+    <td class="xl25" width="69" style="width:52pt"><strong><img src="Carrinho.gif" width="79"
+    height="52" alt="Carrinho.gif (2301 bytes)"></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl24" width="41" style="height:12.75pt;width:31pt" align="center"><strong>REF</strong></td>
+    <td class="xl24" width="431" style="width:323pt" align="center"><strong>DESCRICAO</strong></td>
+    <td class="xl24" width="35" style="width:26pt" align="center">&nbsp;</td>
+    <td class="xl25" width="69" style="width:52pt" align="center"><strong>VENDA</strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9001</small></strong></td>
+    <td class="xl27"><strong><small>ACELERADOR PARMA<span style="mso-spacerun: yes">&nbsp; </span>TURBO
+    1-1,5 E 2 OHMS #261</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="50"><strong><small>50,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9002</small></strong></td>
+    <td class="xl27"><strong><small>ACELERADOR PARMA TURBO C/RESIST.EXT.#271</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="110"><strong><small>110,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9011</small></strong></td>
+    <td class="xl27"><strong><small>AIR BRUSH BADGER MOD.350-4</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="140"><strong><small>140,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9015</small></strong></td>
+    <td class="xl27"><strong><small>ALINHADOR DE CARVAO KOFORD M148 ALIGNEMENT</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>5,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9017</small></strong></td>
+    <td class="xl27"><strong><small>ALINHADOR DE CARVAO E IND. PARMA #483</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>5,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9025</small></strong></td>
+    <td class="xl27"><strong><small>ARRUELA TEFLON 3/32 X 0,16 JK CARTELA C/6 X 25 PCS</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="16"><strong><small>16,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9026</small></strong></td>
+    <td class="xl27"><strong><small>ARRUELA DE FENOLITE<span style="mso-spacerun: yes">&nbsp; </span>P/MOTOR
+    CARTELA C/ 6 X 12 PCS</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="14"><strong><small>14,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9027</small></strong></td>
+    <td class="xl27"><strong><small>BITZ DIAMANTE P/RETIFICA DE COLETOR</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="110"><strong><small>110,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9030</small></strong></td>
+    <td class="xl27"><strong><small>BUCHA DE CAIXA E NYLON MURA (cada)</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1"><strong><small>1,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9032</small></strong></td>
+    <td class="xl27"><strong><small>BUCHA P/CAIXA PRO SLOT #716</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1"><strong><small>1,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9036</small></strong></td>
+    <td class="xl27"><strong><small>BUCHA P/CAIXA KOFORD M184</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1"><strong><small>1,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9037</small></strong></td>
+    <td class="xl27"><strong><small>BUCHA PARMA 1/8 E 3/32 (PAR)</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9042</small></strong></td>
+    <td class="xl27"><strong><small>CANETA PILOT DOURADA</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="7"><strong><small>7,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9043</small></strong></td>
+    <td class="xl27"><strong><small>CANETA PARMA(DETALHAR FRIZOS) #10.396</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3"><strong><small>3,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9050</small></strong></td>
+    <td class="xl27"><strong><small>CARROCERIA DE LEXAN 1/24</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>5,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9053</small></strong></td>
+    <td class="xl27"><strong><small>CARRO PARMA FLEX KAR #445</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="34"><strong><small>34,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9054</small></strong></td>
+    <td class="xl27"><strong><small>CARRO PARMA P/ALUGUEL<span style="mso-spacerun: yes">&nbsp;
+    </span>#00434</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="51"><strong><small>51,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9055</small></strong></td>
+    <td class="xl27"><strong><small>CARRO RJR 20</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="98"><strong><small>98,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9056</small></strong></td>
+    <td class="xl27"><strong><small>CARRO KOFORD 20</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="110"><strong><small>110,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9058</small></strong></td>
+    <td class="xl27"><strong><small>CARRO KOFORD 27 M352-9</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="338"><strong><small>338,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9060</small></strong></td>
+    <td class="xl27"><strong><small>CHAVE ALLEN WIHA</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="8"><strong><small>8,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9061</small></strong></td>
+    <td class="xl27"><strong><small>CHAVE ALLEN PARMA #7910 /PRO SLOT #605</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="8"><strong><small>8,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9063</small></strong></td>
+    <td class="xl27"><strong><small>CHAVE ALLEN P.SLOT C/CHAVE DE GUIA #650</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="12"><strong><small>12,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9064</small></strong></td>
+    <td class="xl27"><strong><small>CHAVE ALLEN P.SLOT C/CHAVE DE GUIA C/TORQUIMETR #651</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="20"><strong><small>20,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9072</small></strong></td>
+    <td class="xl27"><strong><small>CHASSIS ZAP #110</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="47"><strong><small>47,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9076</small></strong></td>
+    <td class="xl27"><strong><small>CHUMBO PARMA AUTO ADESIVO #13.600</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="6"><strong><small>6,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9078</small></strong></td>
+    <td class="xl27"><strong><small>CHUPETA 3 CORES (JOGO) BOOTS #6075 JK</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9080</small></strong></td>
+    <td class="xl27"><strong><small>CONTATO PARMA 408 BIG MAMA PRE BENT BRAID #663B</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1"><strong><small>1,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9082</small></strong></td>
+    <td class="xl27"><strong><small>COLETOR MABUCHI</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9083</small></strong></td>
+    <td class="xl27"><strong><small>COLETOR MURA</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3"><strong><small>3,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9085</small></strong></td>
+    <td class="xl27"><strong><small>COROA COX<span style="mso-spacerun: yes">&nbsp;&nbsp; </span>(IN
+    LINE) 24-25-26-</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9086</small></strong></td>
+    <td class="xl27"><strong><small>COROA COBRA S/W 28-29-30-33 1/8 pitch 48</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9087</small></strong></td>
+    <td class="xl27"><strong><small>COROA JK<span style="mso-spacerun: yes">&nbsp; </span>36-37-38-39D
+    #4436</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3"><strong><small>3,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9088</small></strong></td>
+    <td class="xl27"><strong><small>COROA PSE 36-37-38-39-40 # 70103BP/PRO SLOT</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3.5"><strong><small>3,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9090</small></strong></td>
+    <td class="xl27"><strong><small>COROA FAAS 36,37,38,39D</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5.5"><strong><small>5,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9094</small></strong></td>
+    <td class="xl27"><strong><small>CORREIA DE BORRACHA P/CARROS DE ALUGUEL #BELTS 544</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="10"><strong><small>10,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9098</small></strong></td>
+    <td class="xl27"><strong><small>DISSIPADOR KOFORD # M.205 OU ALPHA #861</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>5,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9102</small></strong></td>
+    <td class="xl27"><strong><small>DISCO DE DREMEL C/FIBRA DE VIDRO #426</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="12"><strong><small>12,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9105</small></strong></td>
+    <td class="xl27"><strong><small>DREMEL MODELO #750 C/BATERIA REGARREGAVEL</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="77"><strong><small>77,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9107</small></strong></td>
+    <td class="xl27"><strong><small>DREMEL MODELO #2850 (KIT COMPLETO) 2 VELOCIDADE</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="134"><strong><small>134,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9108</small></strong></td>
+    <td class="xl27"><strong><small>DREMEL MODELO #3950 (KIT COMPLETO) 5 VELOCIDADE</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="150"><strong><small>150,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9109</small></strong></td>
+    <td class="xl27"><strong><small>DREMEL (MANDRIL DE DISCO)#402</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="6"><strong><small>6,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9112</small></strong></td>
+    <td class="xl27"><strong><small>EIXO PARMA<span style="mso-spacerun: yes">&nbsp;&nbsp; </span>3/32
+    E 1/8<span style="mso-spacerun: yes">&nbsp; </span>#633</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3"><strong><small>3,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9115</small></strong></td>
+    <td class="xl27"><strong><small>EIXO KOFORD 3/32 M156R</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>5,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9122</small></strong></td>
+    <td class="xl27"><strong><small>ESCOVA P/MOTOR PARMA C/MOLA #500 DK</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1"><strong><small>1,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9124</small></strong></td>
+    <td class="xl27"><strong><small>ESCOVA MURA BIG FOOT #M3254</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3.5"><strong><small>3,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9130</small></strong></td>
+    <td class="xl27"><strong><small>ESCOVA FRONT LINE BRUSHES #310 (P/PENTEAR CONTATO)</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="6"><strong><small>6,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9233</small></strong></td>
+    <td class="xl27"><strong><small>FIO DE SILICONE PARMA 10 FEET 18 G #492</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="8"><strong><small>8,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9234</small></strong></td>
+    <td class="xl27"><strong><small>FIO DE SILICONE JK 10 FEET #3532 P.SLOT 622</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="8"><strong><small>8,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9236</small></strong></td>
+    <td class="xl27"><strong><small>FIO DE SILICONE PARMA 14 G (P/CABO DE ACEL.) #385D</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="12"><strong><small>12,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9240</small></strong></td>
+    <td class="xl27"><strong><small>GATILHO PARMA TRIGGER #355C</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="6"><strong><small>6,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9242</small></strong></td>
+    <td class="xl27"><strong><small>GLUBS KOFORD MEDIUN/HEAVY M319</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>5,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9244</small></strong></td>
+    <td class="xl27"><strong><small>GRAMPEADOR RAPID 51 #70.300</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="45"><strong><small>45,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9245</small></strong></td>
+    <td class="xl27"><strong><small>GRAMPO PSE 70.301</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="17"><strong><small>17,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9247</small></strong></td>
+    <td class="xl27"><strong><small>GUIA STARBURST/JET FLAG PN 1609</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1"><strong><small>1,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9248</small></strong></td>
+    <td class="xl27"><strong><small>GUIA PARMA THE BLADE #645</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1.5"><strong><small>1,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9262</small></strong></td>
+    <td class="xl27"><strong><small>INDUZIDO PARMA #500A</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="6"><strong><small>6,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9265</small></strong></td>
+    <td class="xl27"><strong><small>INDUZIDO PARMA SUPER BAL. # 502A</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="8"><strong><small>8,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9266</small></strong></td>
+    <td class="xl27"><strong><small>INDUZIDO PARMA DEATH STAR #501A</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="7"><strong><small>7,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9269</small></strong></td>
+    <td class="xl27"><strong><small>INDUZIDO PRO SLOT PS 704 G0X<span
+    style="mso-spacerun: yes">&nbsp; </span>42` INTRUDER</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="16"><strong><small>16,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9271</small></strong></td>
+    <td class="xl27"><strong><small>INDUZIDO PRO SLOT PS 701 G12X 42` INTRUD.INTER.</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="17"><strong><small>17,00</small></strong></td>
+  </tr>
+  <tr height="17" style="page-break-before:always;height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9274</small></strong></td>
+    <td class="xl27"><strong><small>INDUZIDO PRO SLOT PS 703 G.20 42' INTRUD. INTER.</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="21"><strong><small>21,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9279</small></strong></td>
+    <td class="xl27"><strong><small>INDUZIDO KOFORD 27 #255G27-5S .480</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="33"><strong><small>33,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9280</small></strong></td>
+    <td class="xl27"><strong><small>INDUZIDO KOFORD 27-459/480</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="38"><strong><small>38,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9285</small></strong></td>
+    <td class="xl27"><strong><small>INDUZIDO RJR GOX #930 PROMOCAO</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="10"><strong><small>10,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9286</small></strong></td>
+    <td class="xl27"><strong><small>INDUZIDO RJR G20<span style="mso-spacerun: yes">&nbsp; </span>42`
+    #904<span style="mso-spacerun: yes">&nbsp; </span>PROMOCAO</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="13"><strong><small>13,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9300</small></strong></td>
+    <td class="xl27"><strong><small>KIT DE FERRAGENS P/NYLON MURA</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>5,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9310</small></strong></td>
+    <td class="xl27"><strong><small>MOLA P/MOTOR PARMA</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="0.5"><strong><small>0,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9312</small></strong></td>
+    <td class="xl27"><strong><small>MOLA MURA (MEDIO OVERHEAD) M3117</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1.5"><strong><small>1,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9313</small></strong></td>
+    <td class="xl27"><strong><small>MOLA RJR (MEDIA OVERHEAD)#651</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1.5"><strong><small>1,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9314</small></strong></td>
+    <td class="xl27"><strong><small>MOLA KOFORD M276 HEAVY 459/#246COMPRIDA VERTICAL</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3"><strong><small>3,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9316</small></strong></td>
+    <td class="xl27"><strong><small>MOLA CAMEN DOUBLE OVERHEAD 1620-10</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9320</small></strong></td>
+    <td class="xl27"><strong><small>MACHO 4/40 TAPS (P/FAZER ROSCA EM COROA OU PNEU)</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="13"><strong><small>13,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9355</small></strong></td>
+    <td class="xl27"><strong><small>MOTOR PARMA #499</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="15"><strong><small>15,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9356</small></strong></td>
+    <td class="xl27"><strong><small>MOTOR PARMA #501</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="13"><strong><small>13,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9357</small></strong></td>
+    <td class="xl27"><strong><small>MOTOR PARMA #502 PERF.12</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="14"><strong><small>14,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9362</small></strong></td>
+    <td class="xl27"><strong><small>MOTOR KOFORD 20 #409.20</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="48"><strong><small>48,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9363</small></strong></td>
+    <td class="xl27"><strong><small>MOTOR KOFORD 27 MICRO #196 -9ST-8-27 OU RL 006</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="182"><strong><small>182,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9367</small></strong></td>
+    <td class="xl27"><strong><small>MOTOR PRO SLOT SUPER WASP PS732 40'INTRUD.</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="25"><strong><small>25,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9369</small></strong></td>
+    <td class="xl27"><strong><small>MOTOR PRO SLOT X12 #723 40' INTRUD.</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="30"><strong><small>30,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt" x:num><strong><small>9370</small></strong></td>
+    <td class="xl27"><strong><small>MOTOR PRO SLOT G20 SIMPLES #730</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="34"><strong><small>34,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9371</small></strong></td>
+    <td class="xl27"><strong><small>MOTOR PRO SLOT G20 #PS 731 I OU Z C/IMA QUAD</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="39"><strong><small>39,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9383</small></strong></td>
+    <td class="xl27"><strong><small>NYLON RJR COMPLETO #361E</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="8"><strong><small>8,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9387</small></strong></td>
+    <td class="xl27" x:str="OLEO MURA "><strong><small>OLEO MURA </small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>5,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9393</small></strong></td>
+    <td class="xl27"><strong><small>PILOTO PLANO DE LEXAN C/6 6PCS #70.460</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="6"><strong><small>6,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9395</small></strong></td>
+    <td class="xl27"><strong><small>PINHAO DE ACO PARMA,9,10D. PITCH 48</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9397</small></strong></td>
+    <td class="xl27"><strong><small>PINHAO DE LATAO PITCH 64<span style="mso-spacerun: yes">&nbsp;
+    </span>8-9-10-11-12D.</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9403</small></strong></td>
+    <td class="xl27"><strong><small>PINHAO FAAS-8,9,10,11,12D</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3.51"><strong><small>3,51</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9405</small></strong></td>
+    <td class="xl27"><strong><small>PINHAO FAAS 10D.NEW ANGLE</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>5,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9430</small></strong></td>
+    <td class="xl27"><strong><small>PIVOT ALLEN DE RODA<span style="mso-spacerun: yes">&nbsp;&nbsp;
+    </span>(chave 0.50) #CH 902</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="0.5"><strong><small>0,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9431</small></strong></td>
+    <td class="xl27"><strong><small>PIVOT ALLEN DE MOTOR (chave 5/64) PAR</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1.5"><strong><small>1,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9432</small></strong></td>
+    <td class="xl27"><strong><small>PIVOT ALLEN DE MOTOR (chave 0.50) PAR</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1.5"><strong><small>1,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9433</small></strong></td>
+    <td class="xl27"><strong><small>PIVOT ALLEN<span style="mso-spacerun: yes">&nbsp; </span>0.50
+    P/FIXAR NYLON NA CX.(PAR)</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1"><strong><small>1,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9436</small></strong></td>
+    <td class="xl27"><strong><small>PORCA DE GUIA KOFORD ALIVIADA ANODIZADA #M302</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3"><strong><small>3,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9438</small></strong></td>
+    <td class="xl27"><strong><small>PORTA FIO MURA (PAR)</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3"><strong><small>3,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9439</small></strong></td>
+    <td class="xl27"><strong><small>PORTA ESCOVA MURA<span style="mso-spacerun: yes">&nbsp; </span>(PAR)</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1"><strong><small>1,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9440</small></strong></td>
+    <td class="xl27"><strong><small>POSTE DE MOLA MURA<span style="mso-spacerun: yes">&nbsp; </span>(PAR)</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="1"><strong><small>1,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9441</small></strong></td>
+    <td class="xl27"><strong><small>PONTEIRA DE CHAVE ALLEN (0.50) PARMA #7911</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>5,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9442</small></strong></td>
+    <td class="xl27"><strong><small>PONTEIRA DE CHAVE ALLEN MURA 0.78</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="10"><strong><small>10,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9445</small></strong></td>
+    <td class="xl27"><strong><small>PONTEIRA DE SOLDADOR UNGAR C/RESIST.PONTA DE ROSCA #4037</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="35"><strong><small>35,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9447</small></strong></td>
+    <td class="xl27"><strong><small>POTENCIOMETRO PSE VARIBRAKE<span style="mso-spacerun: yes">&nbsp;
+    </span>#70.610</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="33"><strong><small>33,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9449</small></strong></td>
+    <td class="xl27"><strong><small>PNEU ALPHA 3/32 X 760 RED-TAN</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="6"><strong><small>6,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9452</small></strong></td>
+    <td class="xl27"><strong><small>PNEU ALPHA 3/32 X 760 SUPERNATURAL PRO HARD #110</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="6"><strong><small>6,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9453</small></strong></td>
+    <td class="xl27"><strong><small>PNEU ALPHA PIRANHA 3/32 X 760 #218</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="8.5"><strong><small>8,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9475</small></strong></td>
+    <td class="xl27"><strong><small>PNEU SONIC 3/32 X 760 BLUE-RED-TAN</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="6"><strong><small>6,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9477</small></strong></td>
+    <td class="xl27"><strong><small>PNEU TUNA 3/32 X 765 #70.981</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="7.5"><strong><small>7,50</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9480</small></strong></td>
+    <td class="xl27"><strong><small>PNEU DIANTEIRO S7 # 143 OU KOFORD OU P.SLOT 610</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3"><strong><small>3,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9485</small></strong></td>
+    <td class="xl27"><strong><small>RABICHO DE PRATA PRO SLOT#613 OU KOF.M268 CART. C/ 6 UN.</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="10"><strong><small>10,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9512</small></strong></td>
+    <td class="xl27"><strong><small>ROLAMENTO PARMA 3/32 #612 (PAR)GTO 1000 TQ3322</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="20"><strong><small>20,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9514</small></strong></td>
+    <td class="xl27"><strong><small>ROLAMENTO MURA P/MOTOR 6MM (CADA)</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="10"><strong><small>10,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9516</small></strong></td>
+    <td class="xl27"><strong><small>ROLAMENTO P/MOTOR 5MM</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="10"><strong><small>10,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9532</small></strong></td>
+    <td class="xl27"><strong><small>SET UP PRO SLOT PS720</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="20"><strong><small>20,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9533</small></strong></td>
+    <td class="xl27"><strong><small>SET UP KOFORD S/IMA SEM FERRAGENS</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="23"><strong><small>23,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9534</small></strong></td>
+    <td class="xl27"><strong><small>SET UP KOFORD S/IMA COM FERRAGENS</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="33"><strong><small>33,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9570</small></strong></td>
+    <td class="xl27"><strong><small>TEFLON DE MOLA<span style="mso-spacerun: yes">&nbsp; </span>PRO
+    SLOT #611 OU KOF.M267 CART.C/ 6 UN.</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="10"><strong><small>10,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9575</small></strong></td>
+    <td class="xl27"><strong><small>TEFLON DE GUIA CARTELA 6 X 12</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="13"><strong><small>13,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9580</small></strong></td>
+    <td class="xl27"><strong><small>TINTA P/INDUZIDO</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="10"><strong><small>10,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9599</small></strong></td>
+    <td class="xl27"><strong><small>TORNO JK P/RETIFICA DE PNEUS TRIMMER #8033</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="104"><strong><small>104,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9600</small></strong></td>
+    <td class="xl27"><strong><small>TORNO COBRA P/RETIFICA DE COLETOR C/MOTOR E BITZ #2000S</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="280"><strong><small>280,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"></td>
+    <td class="xl24"><strong><small>LINHA HO</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="0"><strong><small>0,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9660</small></strong></td>
+    <td class="xl27"><strong><small>CARROCERIA HO MODELOS DIVERSOS</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="8"><strong><small>8,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9663</small></strong></td>
+    <td class="xl27"><strong><small>CONTATO HO</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9665</small></strong></td>
+    <td class="xl27"><strong><small>COROA E PINHAO HO #6548</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="page-break-before:always;height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9670</small></strong></td>
+    <td class="xl27"><strong><small>COROA PINHAO E EIXO HO #6556</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3"><strong><small>3,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9680</small></strong></td>
+    <td class="xl27"><strong><small>ESCOVAS HO #6552</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9685</small></strong></td>
+    <td class="xl27"><strong><small>GUIA HO #6531</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9690</small></strong></td>
+    <td class="xl27"><strong><small>IMA HO #6573F</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="3"><strong><small>3,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9697</small></strong></td>
+    <td class="xl27"><strong><small>INDUZIDO TYCO<span style="mso-spacerun: yes">&nbsp; </span>#6571</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="4"><strong><small>4,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9700</small></strong></td>
+    <td class="xl27"><strong><small>KIT HO PNEUS CONTATO GUIA COROA #6669</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="6"><strong><small>6,00</small></strong></td>
+  </tr>
+  <tr height="17" style="height:12.75pt">
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9715</small></strong></td>
+    <td class="xl27"><strong><small>MOLA P/MOTOR HO</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="2"><strong><small>2,00</small></strong></td>
+  </tr>
+  <tr>
+    <td height="17" class="xl26" style="height:12.75pt"><strong><small>9720</small></strong></td>
+    <td class="xl27"><strong><small>MOTOR TYCO HO #6582</small></strong></td>
+    <td class="xl27"><strong><small>US$</small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>5,00</small></strong></td>
+  </tr>
+  <tr>
+    <td height="17" class="xl26" style="height:12.75pt"></td>
+    <td class="xl27"><strong><small><p align="center"></small><font color="#000000"><big>DESPACHAMOS
+    PARA TODO BRASIL</big></font></strong></td>
+    <td class="xl27"><strong><small>&nbsp; </small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>&nbsp; </small></strong></td>
+  </tr>
+  <tr>
+    <td height="17" class="xl26" style="height:12.75pt"></td>
+    <td class="xl27"><strong><small><p align="center"></small><font color="#000000">Para fazer
+    seu pedido, é só nos contactar por e-mail ou telefone e especificar o codigo e
+    quantidade das mercadorias</font></strong></p>
+    <p align="center"><a href="mailto:sandro@sjracing.com.br"><big><font color="#0000FF"><strong>sandro@sjracing.com.br</strong></font></big></a></td>
+    <td class="xl27"><strong><small>&nbsp; </small></strong></td>
+    <td class="xl28" align="right" x:num="5"><strong><small>&nbsp; </small></strong></td>
+  </tr>
+</table>
+</center></div>
+
+<p align="center"><font color="#000000"><em><strong><a href="listanacional.htm">LISTA DE
+PREÇOS <small><br>
+</small>(PRODUTOS NACIONAL)</a></strong></em></font></p>
+</body>
+</html>
+<!-- Código HTML FASTbanner! -->
+<!-- Código HTML FASTbanner! -->
+<!-- INICIO DO CODIGO DO BANNER-LINK -->
